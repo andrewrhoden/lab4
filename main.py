@@ -8,18 +8,12 @@ app = Flask(__name__)
 # the App Engine WSGI application server.
 
 
-@app.route('/')
-def hello():
-    """Return a friendly HTTP greeting."""
-    return 'Hello World!'
-
-
 @app.errorhandler(404)
 def page_not_found(e):
     """Return a custom 404 error."""
     return 'Sorry, Nothing at this URL.', 404
 
 
-@app.route('/calculator')
-def pon(name=None):
-    return render_template('calculator.html',name=name)
+@app.route('/catwalk')
+def catwalk(name=None):
+    return render_template('catwalk.html',name=name)
